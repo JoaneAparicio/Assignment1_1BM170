@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="imdf_net_1727967480.2144787" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>imdf_net_1727967480.2144787</text>
+    </name>
+    <page id="n0">
+      <place id="p1">
+        <name>
+          <text>p1</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p2">
+        <name>
+          <text>p2</text>
+        </name>
+      </place>
+      <place id="p3">
+        <name>
+          <text>p3</text>
+        </name>
+      </place>
+      <place id="p4">
+        <name>
+          <text>p4</text>
+        </name>
+      </place>
+      <place id="p5">
+        <name>
+          <text>p5</text>
+        </name>
+      </place>
+      <place id="p6">
+        <name>
+          <text>p6</text>
+        </name>
+      </place>
+      <place id="p7">
+        <name>
+          <text>p7</text>
+        </name>
+      </place>
+      <place id="p8">
+        <name>
+          <text>p8</text>
+        </name>
+      </place>
+      <transition id="A">
+        <name>
+          <text>Turning and Milling</text>
+        </name>
+      </transition>
+      <transition id="B">
+        <name>
+          <text>Turning and Milling Quality Control</text>
+        </name>
+      </transition>
+      <transition id="C">
+        <name>
+          <text>Laser Marking</text>
+        </name>
+      </transition>
+      <transition id="D">
+        <name>
+          <text>Lapping</text>
+        </name>
+      </transition>
+      <transition id="E">
+        <name>
+          <text>Round Grinding</text>
+        </name>
+      </transition>
+      <transition id="F">
+        <name>
+          <text>Final Inspection</text>
+        </name>
+      </transition>
+      <transition id="G">
+        <name>
+          <text>Packing</text>
+        </name>
+      </transition>
+      <arc id="1" source="p1" target="A"/>
+      <arc id="2" source="A" target="p2"/>
+      <arc id="3" source="p2" target="B"/>
+      <arc id="4" source="B" target="p3"/>
+      <arc id="5" source="p3" target="C"/>
+      <arc id="6" source="C" target="p4"/>
+      <arc id="7" source="p4" target="D"/>
+      <arc id="10" source="D" target="p5"/>
+      <arc id="11" source="p5" target="E"/>
+      <arc id="12" source="E" target="p6"/>
+      <arc id="13" source="p6" target="F"/>
+      <arc id="14" source="F" target="p7"/>
+      <arc id="15" source="p7" target="G"/>
+      <arc id="18" source="G" target="p8"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="p8">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
